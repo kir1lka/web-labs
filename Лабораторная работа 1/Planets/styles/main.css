@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid #c8c8c8;
+  font-size: 13px;
+}
+
+caption {
+  padding: 10px;
+}
+
+th, td {
+  border: 1px solid #b4b4b4;
+  padding: 10px 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #ebebeb;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f5f5f5;
+}
+
+.planet-name {
+  border: 2px solid black;
+}
