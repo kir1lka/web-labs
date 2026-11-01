@@ -23,7 +23,7 @@ form.addEventListener("submit", function (event) {
 
   const total = Number(flight.value) * quantity;
   const departure = date.value.split("-").reverse().join(".");
-  result.textContent = "Учебное бронирование оформлено. Пассажир: " +
+  result.textContent = "Бронирование оформлено. Пассажир: " +
     passenger + ". Рейс " + flight.options[flight.selectedIndex].text +
     ". Дата вылета: " + departure + ". Билетов: " + quantity +
     ". Общая стоимость: " + total + " ₽.";
