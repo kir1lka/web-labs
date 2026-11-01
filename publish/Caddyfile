@@ -9,6 +9,7 @@ https://hki-stroitel.ru {
 	tls /certs/hki-stroitel.ru.crt /certs/hki-stroitel.ru.key
 
 	route {
+		redir / /web-labs/ 302
 		@private path_regexp private (?i)(^|/)[.]|[.](docx|pdf|zip|py|md|ya?ml|json|toml|ini|env|log|bak|tmp|ps1|sh|bat|cmd|exe|dll|key|pem|crt)$
 		respond @private 404
 
