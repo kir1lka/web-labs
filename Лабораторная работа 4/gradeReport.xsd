@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="gradeReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="date" type="xs:string"/>
+        <xs:element name="subject" type="xs:string"/>
+        <xs:element name="examiner" type="xs:string"/>
+        <xs:element name="gradeList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="gradeRecord" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="student" type="xs:string"/>
+                    <xs:element name="grade" type="xs:integer"/>
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

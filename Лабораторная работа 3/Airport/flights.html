@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Рейсы | Аэропорт</title>
+    <link rel="stylesheet" href="styles/pages.css">
+    
+  </head>
+  <body>
+    <header>
+      <h1>Аэропорт</h1>
+    <nav aria-label="Основное меню">
+      <a href="index.html">Главная</a>
+      <a href="flights.html" class="current" aria-current="page">Рейсы</a>
+      <a href="booking.html">Бронирование</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+    </header>
+    <main>
+      <h2>Расписание рейсов</h2>
+      <p>Учебное расписание. Все рейсы выполняются ежедневно, время указано московское.</p>
+      <table id="flight-table">
+        <caption>Рейсы из Москвы</caption>
+        <thead>
+          <tr><th scope="col">Рейс</th><th scope="col">Направление</th><th scope="col">Вылет</th><th scope="col">Цена билета</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">AP101</th><td>Москва – Санкт-Петербург</td><td>09:00</td><td>4500 ₽</td></tr>
+          <tr><th scope="row">AP202</th><td>Москва – Сочи</td><td>12:30</td><td>7000 ₽</td></tr>
+          <tr><th scope="row">AP303</th><td>Москва – Казань</td><td>16:00</td><td>5500 ₽</td></tr>
+        </tbody>
+      </table>
+      <p><a class="button" href="booking.html">Забронировать билет</a></p>
+    </main>
+    <footer>
+      <p>Учебный сайт аэропорта. Бронирование используется для демонстрации.</p>
+    </footer>
+  </body>
+</html>

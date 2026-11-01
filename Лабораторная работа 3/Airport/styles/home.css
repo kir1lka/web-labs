@@ -1,0 +1,59 @@
+/* Отдельное оформление главной страницы */
+body {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
+  color: #333;
+  background-color: #f0f7fc;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+header, footer {
+  text-align: center;
+}
+h1 {
+  color: #205d88;
+}
+nav {
+  padding: 12px;
+  border-bottom: 2px solid #205d88;
+}
+nav a {
+  margin: 0 14px;
+}
+a:link {
+  color: #205d88;
+}
+a:visited {
+  color: #703c78;
+}
+a:hover {
+  text-decoration: none;
+}
+a:focus-visible {
+  outline: 2px solid #205d88;
+  outline-offset: 3px;
+}
+.current {
+  font-weight: bold;
+}
+#welcome {
+  margin-top: 25px;
+  padding: 25px;
+  background-color: #d7e9f5;
+  text-align: center;
+}
+.button {
+  display: inline-block;
+  padding: 8px 15px;
+  border: 1px solid #205d88;
+  background-color: white;
+}
+.info {
+  margin: 25px 0;
+}
+footer {
+  margin-top: 30px;
+  border-top: 1px solid #adbdc9;
+  font-size: 14px;
+}

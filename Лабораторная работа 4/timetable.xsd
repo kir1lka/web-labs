@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="timetable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="day" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="day">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="lesson" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="dayOfWeek" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="lesson">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="timeFrom"/>
+        <xs:element ref="timeTo"/>
+        <xs:element ref="subject"/>
+        <xs:element ref="teacher"/>
+        <xs:element ref="room" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="type" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="timeFrom" type="xs:string"/>
+  <xs:element name="timeTo" type="xs:string"/>
+  <xs:element name="subject" type="xs:string"/>
+  <xs:element name="teacher" type="xs:string"/>
+  <xs:element name="room" type="xs:string"/>
+</xs:schema>

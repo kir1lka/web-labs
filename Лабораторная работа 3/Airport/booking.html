@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Бронирование | Аэропорт</title>
+    <link rel="stylesheet" href="styles/pages.css">
+    <script src="scripts/booking.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Аэропорт</h1>
+    <nav aria-label="Основное меню">
+      <a href="index.html">Главная</a>
+      <a href="flights.html">Рейсы</a>
+      <a href="booking.html" class="current" aria-current="page">Бронирование</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+    </header>
+    <main>
+      <h2>Бронирование билета</h2>
+      <p>Выберите рейс и заполните данные. После отправки формы на странице появится результат бронирования.</p>
+      <form id="booking-form">
+        <p>
+          <label for="flight">Рейс</label>
+          <select id="flight" name="flight" required>
+            <option value="4500">AP101: Москва – Санкт-Петербург, 09:00</option>
+            <option value="7000">AP202: Москва – Сочи, 12:30</option>
+            <option value="5500">AP303: Москва – Казань, 16:00</option>
+          </select>
+        </p>
+        <p>
+          <label for="date">Дата вылета</label>
+          <input id="date" name="date" type="date" required>
+        </p>
+        <p>
+          <label for="quantity">Количество билетов</label>
+          <input id="quantity" name="quantity" type="number" min="1" max="6" value="1" required>
+        </p>
+        <p>
+          <label for="passenger">ФИО пассажира, оформляющего бронирование</label>
+          <input id="passenger" name="passenger" type="text" maxlength="100" autocomplete="name" required>
+        </p>
+        <button type="submit">Забронировать</button>
+      </form>
+      <p id="booking-result" class="result" role="status" hidden></p>
+      <p class="note">Учебная форма не отправляет данные в аэропорт и не сохраняет их.</p>
+    </main>
+    <footer>
+      <p>Учебный сайт аэропорта. Бронирование используется для демонстрации.</p>
+    </footer>
+  </body>
+</html>

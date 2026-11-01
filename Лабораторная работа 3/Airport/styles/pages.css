@@ -1,0 +1,108 @@
+/* Общее оформление внутренних страниц */
+body {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
+  color: #333;
+  background-color: white;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+header, footer {
+  text-align: center;
+}
+h1, h2 {
+  color: #205d88;
+}
+nav {
+  padding: 12px;
+  background-color: #e7f0f7;
+}
+nav a {
+  margin: 0 14px;
+}
+a:link {
+  color: #205d88;
+}
+a:visited {
+  color: #703c78;
+}
+a:hover {
+  text-decoration: none;
+}
+a:focus-visible, button:focus-visible {
+  outline: 2px solid #205d88;
+  outline-offset: 3px;
+}
+.current {
+  font-weight: bold;
+}
+main {
+  margin-top: 25px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+caption {
+  margin-bottom: 10px;
+  text-align: left;
+}
+th, td {
+  padding: 12px;
+  border: 1px solid #bbb;
+  text-align: left;
+}
+thead {
+  background-color: #e7f0f7;
+}
+tbody tr:nth-child(even) {
+  background-color: #f4f8fb;
+}
+#flight-table td:last-child {
+  white-space: nowrap;
+}
+.button, button {
+  display: inline-block;
+  padding: 8px 15px;
+  border: 1px solid #205d88;
+  color: #205d88;
+  background-color: #f0f7fc;
+  font: inherit;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #d7e9f5;
+}
+#booking-form {
+  max-width: 500px;
+}
+label {
+  display: block;
+  margin-bottom: 4px;
+}
+input, select, textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 7px;
+  border: 1px solid #999;
+  font: inherit;
+}
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid #205d88;
+}
+.result {
+  padding: 15px;
+  border: 1px solid #6b8d54;
+  background-color: #eff7e9;
+}
+.note, footer {
+  font-size: 14px;
+}
+.info {
+  margin: 25px 0;
+}
+footer {
+  margin-top: 30px;
+  border-top: 1px solid #bbb;
+}
