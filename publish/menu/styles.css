@@ -1,0 +1,44 @@
+body {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+  background-color: #f0f7fc;
+  color: #333;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+h1 {
+  color: #205d88;
+  font-size: 30px;
+}
+header {
+  margin-bottom: 25px;
+  border-bottom: 2px solid #205d88;
+}
+.labs {
+  padding: 0;
+  list-style: none;
+}
+.labs a {
+  display: block;
+  margin-bottom: 15px;
+  padding: 18px 22px;
+  border: 1px solid #adbdc9;
+  background-color: white;
+  color: #205d88;
+  text-decoration: none;
+}
+.labs strong, .labs span {
+  display: block;
+}
+.labs strong {
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+.labs span {
+  color: #333;
+}
+.labs a:hover, .labs a:focus-visible {
+  background-color: #d7e9f5;
+  outline: 2px solid #205d88;
+}
