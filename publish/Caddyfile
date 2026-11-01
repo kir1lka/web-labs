@@ -1,60 +1,17 @@
-{
-	auto_https off
-	servers {
-		protocols h1 h2
-	}
-}
+@webLabsNeedsSlash path /web-labs /web-labs/lab1 /web-labs/lab2 /web-labs/lab3 /web-labs/lab4 /web-labs/lab1/letter /web-labs/lab1/planets
+redir @webLabsNeedsSlash {http.request.uri.path}/ 308
 
-https://hki-stroitel.ru {
-	tls /certs/hki-stroitel.ru.crt /certs/hki-stroitel.ru.key
-
+handle_path /web-labs/* {
 	route {
-		redir / /web-labs/ 302
-		@private path_regexp private (?i)(^|/)[.]|[.](docx|pdf|zip|py|md|ya?ml|json|toml|ini|env|log|bak|tmp|ps1|sh|bat|cmd|exe|dll|key|pem|crt)$
-		respond @private 404
+		@webLabsPrivate path_regexp webLabsPrivate (?i)(^|/)[.]|[.](docx|pdf|zip|py|md|ya?ml|json|toml|ini|env|log|bak|tmp|ps1|sh|bat|cmd|exe|dll|key|pem|crt)$
+		respond @webLabsPrivate 404
 
-		@needsSlash path /web-labs /web-labs/lab1 /web-labs/lab2 /web-labs/lab3 /web-labs/lab4 /web-labs/lab1/letter /web-labs/lab1/planets
-		redir @needsSlash {http.request.uri.path}/ 308
+		@webLabsUnsupported {
+			not path_regexp webLabsPublic (?i)(/|[.](html|css|js|png|jpe?g|gif|webp|svg|ico|xml|dtd|xsd))$
+		}
+		respond @webLabsUnsupported 404
 
-		@unsupported {
-			not path_regexp public (?i)(/|[.](html|css|js|png|jpe?g|gif|webp|svg|ico|xml|dtd|xsd))$
-		}
-		respond @unsupported 404
-
-		handle_path /web-labs/lab1/letter/* {
-			root * "/repo/Лабораторная работа 1/Letter"
-			file_server
-		}
-		handle_path /web-labs/lab1/planets/* {
-			root * "/repo/Лабораторная работа 1/Planets"
-			file_server
-		}
-		handle_path /web-labs/lab2/* {
-			root * "/repo/Лабораторная работа 2/BirdWatching"
-			file_server
-		}
-		handle_path /web-labs/lab3/* {
-			root * "/repo/Лабораторная работа 3/Airport"
-			file_server
-		}
-		handle_path /web-labs/lab4/* {
-			root * "/repo/Лабораторная работа 4"
-			file_server
-		}
-		@lab1index path /web-labs/lab1/ /web-labs/lab1/index.html
-		handle @lab1index {
-			root * /repo/publish
-			rewrite * /lab1-index.html
-			file_server {
-				disable_canonical_uris
-			}
-		}
-		handle_path /web-labs/* {
-			root * /repo/publish/menu
-			file_server
-		}
-		handle {
-			respond 404
-		}
+		root * /repo
+		file_server
 	}
 }
