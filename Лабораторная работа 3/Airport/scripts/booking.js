@@ -1,9 +1,8 @@
-// Учебное бронирование без отправки данных на сервер.
+
 const form = document.getElementById("booking-form");
 const date = document.getElementById("date");
 const result = document.getElementById("booking-result");
 
-// Не разрешаем выбирать прошедшую дату.
 const today = new Date();
 date.min = today.getFullYear() + "-" +
   String(today.getMonth() + 1).padStart(2, "0") + "-" +
