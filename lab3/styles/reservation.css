@@ -1,0 +1,9 @@
+nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 18px; }
+nav a { margin: 0; }
+form { max-width: 620px; }
+fieldset { margin: 18px 0; padding: 12px 18px; border: 1px solid #a9bdcc; }
+legend { padding: 0 6px; font-weight: bold; }
+.choice { display: flex; align-items: center; gap: 8px; margin: 10px 0; }
+.choice input { width: auto; }
+button { margin: 4px 8px 4px 0; }
+#reservation-summary { white-space: pre-line; overflow-wrap: anywhere; }

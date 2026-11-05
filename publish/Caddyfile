@@ -1,4 +1,4 @@
-@webLabsNeedsSlash path /web-labs /web-labs/lab1 /web-labs/lab2 /web-labs/lab3 /web-labs/lab4 /web-labs/lab1/letter /web-labs/lab1/planets
+@webLabsNeedsSlash path /web-labs /web-labs/lab1 /web-labs/lab2 /web-labs/lab3 /web-labs/lab4 /web-labs/lab5 /web-labs/lab6 /web-labs/lab1/letter /web-labs/lab1/planets
 redir @webLabsNeedsSlash {http.request.uri.path}/ 308
 
 handle_path /web-labs/* {

@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="ru">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Объём цилиндра | Лаба 6</title><link rel="stylesheet" href="../lab3/styles/pages.css"><script src="scripts/cylinder.js" defer></script></head>
+<body><main><h1>Объём цилиндра</h1><p>Лабораторная работа 6, вариант 14. Обработка событий в Web-форме с помощью JavaScript.</p>
+<p>Введите радиус основания и высоту в сантиметрах. Наведите указатель на ссылку «Вычислить объём», затем отведите его. Вычисление запускает событие <code>mouseout</code>.</p>
+<p>Формула: <strong>V = πr²h</strong>.</p>
+<form id="cylinder-form" action="index.html" method="get" style="max-width:520px">
+<p><label for="radius">Радиус основания r, см</label><input id="radius" name="radius" type="text" inputmode="decimal" autocomplete="off" placeholder="Например, 2" required></p>
+<p><label for="height">Высота h, см</label><input id="height" name="height" type="text" inputmode="decimal" autocomplete="off" placeholder="Например, 5" required></p>
+<p><a id="calculate" href="#volume">Вычислить объём</a></p>
+<p class="note">При работе с клавиатуры выделите ссылку клавишей Tab и перейдите дальше: расчёт также выполнится.</p>
+<p><label for="volume">Объём V, см³</label><input id="volume" name="volume" type="text" readonly></p>
+<p id="calculation-status" role="status" aria-live="polite"></p>
+<button type="reset">Очистить</button>
+</form><p><a href="../">В главное меню лабораторных работ</a></p></main></body></html>

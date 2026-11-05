@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Заявка на билет | Аэропорт</title>
+  <link rel="stylesheet" href="styles/pages.css">
+  <link rel="stylesheet" href="styles/reservation.css">
+  <script src="scripts/reservation.js" defer></script>
+</head>
+<body>
+  <header><h1>Аэропорт</h1>
+    <nav aria-label="Основное меню">
+      <a href="index.html">Главная</a><a href="flights.html">Рейсы</a>
+      <a href="booking.html">Бронирование</a><a href="contacts.html">Контакты</a>
+      <a href="reservation.html" class="current" aria-current="page">Заявка на билет</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Заявка на бронирование авиабилета</h2>
+    <p>Лабораторная работа 5, вариант 14. Заполните форму и проверьте данные заявки. Это учебная форма: реальные билеты не бронируются.</p>
+    <form id="reservation-form" action="reservation.html" method="get">
+      <input type="hidden" name="variant" value="14">
+      <fieldset><legend>Пассажир и контакты</legend>
+        <p><label for="full-name">ФИО *</label><input id="full-name" name="fullName" type="text" autocomplete="name" maxlength="100" required></p>
+        <p><label for="email">Электронная почта *</label><input id="email" name="email" type="email" autocomplete="email" maxlength="150" required></p>
+        <p><label for="phone">Телефон *</label><input id="phone" name="phone" type="tel" autocomplete="tel" pattern="[+0-9\(\) \-]{7,25}" title="От 7 до 25 символов: цифры, пробелы, +, скобки и дефис" required></p>
+      </fieldset>
+      <fieldset><legend>Параметры перелёта</legend>
+        <p><label for="flight">Рейс *</label><select id="flight" name="flight" required>
+          <option value="">Выберите рейс</option>
+          <option value="AP101">AP101: Москва – Санкт-Петербург, 09:00</option>
+          <option value="AP202">AP202: Москва – Сочи, 12:30</option>
+          <option value="AP303">AP303: Москва – Казань, 16:00</option>
+        </select></p>
+        <p><label for="departure">Дата вылета *</label><input id="departure" name="departure" type="date" required></p>
+        <p><label for="tickets">Количество билетов *</label><input id="tickets" name="tickets" type="number" min="1" max="6" step="1" value="1" required></p>
+        <fieldset><legend>Класс обслуживания</legend>
+          <label class="choice"><input type="radio" name="travelClass" value="Эконом" checked> Эконом</label>
+          <label class="choice"><input type="radio" name="travelClass" value="Бизнес"> Бизнес</label>
+        </fieldset>
+        <fieldset><legend>Дополнительные услуги</legend>
+          <label class="choice"><input type="checkbox" name="services" value="Багаж"> Багаж</label>
+          <label class="choice"><input type="checkbox" name="services" value="Выбор места"> Выбор места</label>
+        </fieldset>
+        <p><label for="comment">Пожелания пассажира</label><textarea id="comment" name="comment" rows="3" maxlength="500"></textarea></p>
+      </fieldset>
+      <p><label class="choice"><input type="checkbox" name="confirmation" required> Подтверждаю правильность данных *</label></p>
+      <p>* Обязательные поля.</p>
+      <button type="submit">Проверить заявку</button>
+      <button type="reset">Очистить форму</button>
+    </form>
+    <section id="reservation-result" class="result" role="status" hidden><h2>Данные учебной заявки</h2><p id="reservation-summary"></p></section>
+    <p><a href="../lab5/">К лабораторной работе 5</a></p>
+  </main>
+  <footer><p>Учебный сайт аэропорта</p></footer>
+</body>
+</html>
