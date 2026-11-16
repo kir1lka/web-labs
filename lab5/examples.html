@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ru">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Примеры форм | Лаба 5</title><link rel="stylesheet" href="../lab3/styles/pages.css"><link rel="stylesheet" href="../lab3/styles/reservation.css"><script src="scripts/examples.js" defer></script></head>
-<body><main><h1>Примеры элементов форм</h1><p>Данные показываются на странице. Файлы и пароли никуда не отправляются.</p>
+<body><main><h1>Примеры элементов форм</h1>
 <form id="examples-form" action="examples.html" method="get">
 <input type="hidden" name="year" value="2026">
 <p><label for="example-name">Имя</label><input id="example-name" type="text" name="name" value="Родион" maxlength="50"></p>
@@ -10,7 +10,7 @@
 <p><label for="example-password">Пароль</label><input id="example-password" type="password" name="password" autocomplete="new-password"></p>
 <fieldset><legend>Что улучшить</legend><label class="choice"><input type="checkbox" name="improve" value="Графику"> Графику</label><label class="choice"><input type="checkbox" name="improve" value="Содержание"> Содержание</label></fieldset>
 <fieldset><legend>Страница производит хорошее впечатление?</legend><label class="choice"><input type="radio" name="opinion" value="Да" checked> Да</label><label class="choice"><input type="radio" name="opinion" value="Нет"> Нет</label></fieldset>
-<p><label for="example-menu">Меню (можно выбрать несколько пунктов с Ctrl или Command)</label><select id="example-menu" name="rating" multiple size="3"><option>Отлично</option><option selected>Очень хорошо</option><option>Хорошо</option><option>Удовлетворительно</option></select></p>
+<p><label for="example-menu">Меню</label><select id="example-menu" name="rating" multiple size="3"><option>Отлично</option><option selected>Очень хорошо</option><option>Хорошо</option><option>Удовлетворительно</option></select></p>
 <p><label for="example-text">Область ввода</label><textarea id="example-text" name="text" rows="4" cols="15">Область ввода или просмотра текста</textarea></p>
 <p><label for="example-file">Выбор файла</label><input id="example-file" type="file" name="attachment"></p>
 <p><label for="example-readonly">Поле только для чтения</label><input id="example-readonly" type="text" value="Лабораторная работа 5" readonly></p>
