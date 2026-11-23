@@ -1,10 +1,44 @@
 <!doctype html>
 <html lang="ru">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Лабораторная работа 8</title><link rel="stylesheet" href="styles/main.css"><script src="scripts/main.js" defer></script></head>
-<body><main><h1>Лабораторная работа 8</h1><p>Вариант 14. Объекты JavaScript при обработке Web-форм.</p><p id="today" class="note"></p>
-<nav aria-label="Задания"><a href="#sum">Сумма кратных пяти</a><a href="#managers">Менеджеры</a><a href="../">Все лабораторные</a></nav>
-<section id="sum"><h2>1. Сумма чисел, кратных 5</h2><p>Введите десять вещественных чисел. Допустимы отрицательные значения, ноль, десятичная точка или запятая.</p>
-<form id="numbers-form"><div class="fields" id="numbers-fields"></div><p><button type="submit">Вычислить сумму</button><button type="reset">Очистить</button></p><p id="sum-result" class="result" role="status" aria-live="polite"></p></form></section>
-<section id="managers"><h2>2. Пользовательский объект «Менеджер»</h2><p>Восемь экземпляров объекта с четырьмя свойствами: ФИО, отдел, стаж и месячный оклад. Три метода: представление сотрудника, расчёт годового дохода и премии.</p>
-<div class="table-scroll" tabindex="0" aria-label="Таблица менеджеров, доступна горизонтальная прокрутка"><table><caption>Менеджеры и результаты вызова методов</caption><thead><tr><th scope="col">Сотрудник и стаж</th><th scope="col">Отдел</th><th scope="col">Оклад, ₽</th><th scope="col">За год, ₽</th><th scope="col">Премия, ₽</th></tr></thead><tbody id="managers-body"></tbody></table></div></section>
-</main></body></html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Лабораторная работа 8</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Лабораторная работа 8</h1>
+    <p>Вариант 14. Объекты JavaScript при обработке Web-форм.</p>
+    <p id="today" class="note"></p>
+    <nav aria-label="Задания">
+      <a href="#sum">Сумма кратных пяти</a>
+      <a href="#managers">Менеджеры</a>
+      <a href="../">Все лабораторные</a>
+    </nav>
+    <section id="sum">
+      <h2>1. Сумма чисел, кратных 5</h2>
+      <p>Введите десять вещественных чисел. Допустимы отрицательные значения, ноль, десятичная точка или запятая.</p>
+      <form id="numbers-form">
+        <div class="fields" id="numbers-fields"></div>
+        <p><button type="submit">Вычислить сумму</button><button type="reset">Очистить</button></p>
+        <p id="sum-result" class="result" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+    <section id="managers">
+      <h2>2. Пользовательский объект «Менеджер»</h2>
+      <p>Восемь экземпляров объекта с четырьмя свойствами: ФИО, отдел, стаж и месячный оклад. Три метода: представление сотрудника, расчёт годового дохода и премии.</p>
+      <div class="table-scroll" tabindex="0" aria-label="Таблица менеджеров, доступна горизонтальная прокрутка">
+        <table>
+          <caption>Менеджеры и результаты вызова методов</caption>
+          <thead>
+            <tr><th scope="col">Сотрудник и стаж</th><th scope="col">Отдел</th><th scope="col">Оклад, ₽</th><th scope="col">За год, ₽</th><th scope="col">Премия, ₽</th></tr>
+          </thead>
+          <tbody id="managers-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

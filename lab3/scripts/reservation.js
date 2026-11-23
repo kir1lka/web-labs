@@ -1,5 +1,3 @@
-"use strict";
-
 const reservationForm = document.getElementById("reservation-form");
 const departure = document.getElementById("departure");
 const fullName = document.getElementById("full-name");

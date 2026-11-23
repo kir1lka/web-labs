@@ -47,7 +47,6 @@ document.getElementById("numbers-form").addEventListener("submit", event => {
 document.getElementById("numbers-form").addEventListener("input", () => { document.getElementById("sum-result").textContent = ""; });
 document.getElementById("numbers-form").addEventListener("reset", () => { document.getElementById("sum-result").textContent = ""; });
 
-// Функция-конструктор определяет четыре свойства каждого экземпляра.
 function Manager(fullName, department, experience, salary) {
   this.fullName = fullName;
   this.department = department;
@@ -70,7 +69,6 @@ const managers = [
 ];
 for (const manager of managers) {
   const row = document.createElement("tr");
-  // Для каждого из восьми экземпляров вызываются все три метода.
   for (const value of [manager.getProfile(), manager.department, manager.salary.toLocaleString("ru-RU"), manager.annualIncome().toLocaleString("ru-RU"), manager.calculateBonus(10).toLocaleString("ru-RU")]) {
     const cell = document.createElement("td");
     cell.textContent = value;

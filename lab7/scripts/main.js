@@ -1,12 +1,11 @@
 "use strict";
 
-// Все переменные алгоритмов имеют числовой тип. Текст выводится литералами.
 function checkPoint() {
   const x = document.getElementById("x").valueAsNumber;
   const y = document.getElementById("y").valueAsNumber;
   const r = document.getElementById("radius").valueAsNumber;
   let quarter = 0;
-  let location = 0; // 0: вне круга, 1: на границе, 2: внутри.
+  let location = 0;
 
   if (!Number.isFinite(x) || !Number.isFinite(y) || !Number.isFinite(r) || r <= 0) {
     document.getElementById("point-result").textContent = "Введите конечные числовые координаты и положительный радиус.";
@@ -17,7 +16,6 @@ function checkPoint() {
   else if (x < 0 && y < 0) quarter = 3;
   else if (x > 0 && y < 0) quarter = 4;
 
-  // hypot не переполняется при возведении больших координат в квадрат.
   if (Math.hypot(x, y) < r) location = 2;
   else if (Math.hypot(x, y) === r) location = 1;
 
@@ -35,7 +33,6 @@ function checkPower() {
     document.getElementById("power-result").textContent = "Введите положительное целое число в допустимом диапазоне.";
     return;
   }
-  // Последовательно делим на 3, пока деление выполняется без остатка.
   while (remainder > 1 && remainder % 3 === 0) {
     remainder /= 3;
     exponent++;

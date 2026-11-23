@@ -1,15 +1,43 @@
 <!doctype html>
 <html lang="ru">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Лабораторная работа 7</title><link rel="stylesheet" href="styles/main.css"><script src="scripts/main.js" defer></script></head>
-<body><main><h1>Лабораторная работа 7</h1><p>Вариант 14. Алгоритмические конструкции JavaScript.</p>
-<nav aria-label="Задания"><a href="#point">Положение точки</a><a href="#power">Степень тройки</a><a href="../">Все лабораторные</a></nav>
-<section id="point"><h2>1. Точка и круг</h2><p>Проверить, находится ли точка в I или III четверти и строго внутри круга радиуса r с центром в начале координат. Точки на осях не относятся к четвертям, граница круга не входит внутрь.</p>
-<form onsubmit="event.preventDefault(); checkPoint()" oninput="document.getElementById('point-result').textContent = ''" onreset="document.getElementById('point-result').textContent = ''">
-<div class="fields"><label>Координата x<input id="x" name="x" type="number" step="any" required></label><label>Координата y<input id="y" name="y" type="number" step="any" required></label><label>Радиус r &gt; 0<input id="radius" name="radius" type="number" step="any" required></label></div>
-<p><button type="submit">Проверить точку</button><button type="reset">Очистить</button></p>
-<p id="point-result" class="result" role="status" aria-live="polite"></p></form></section>
-<section id="power"><h2>2. Степень числа 3</h2><p>Введите положительное целое число не больше 9 007 199 254 740 991. Проверяем степени 3 с целым неотрицательным показателем: 1 = 3⁰.</p>
-<form onsubmit="event.preventDefault(); checkPower()" oninput="document.getElementById('power-result').textContent = ''" onreset="document.getElementById('power-result').textContent = ''">
-<label>Число n<input id="number" name="number" type="number" min="1" max="9007199254740991" step="1" required></label>
-<p><button type="submit">Проверить число</button><button type="reset">Очистить</button></p><p id="power-result" class="result" role="status" aria-live="polite"></p></form></section>
-</main></body></html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Лабораторная работа 7</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Лабораторная работа 7</h1>
+    <p>Вариант 14. Алгоритмические конструкции JavaScript.</p>
+    <nav aria-label="Задания">
+      <a href="#point">Положение точки</a>
+      <a href="#power">Степень тройки</a>
+      <a href="../">Все лабораторные</a>
+    </nav>
+    <section id="point">
+      <h2>1. Точка и круг</h2>
+      <p>Проверить, находится ли точка в I или III четверти и строго внутри круга радиуса r с центром в начале координат. Точки на осях не относятся к четвертям, граница круга не входит внутрь.</p>
+      <form onsubmit="event.preventDefault(); checkPoint()" oninput="document.getElementById('point-result').textContent = ''" onreset="document.getElementById('point-result').textContent = ''">
+        <div class="fields">
+          <label>Координата x<input id="x" name="x" type="number" step="any" required></label>
+          <label>Координата y<input id="y" name="y" type="number" step="any" required></label>
+          <label>Радиус r &gt; 0<input id="radius" name="radius" type="number" step="any" required></label>
+        </div>
+        <p><button type="submit">Проверить точку</button><button type="reset">Очистить</button></p>
+        <p id="point-result" class="result" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+    <section id="power">
+      <h2>2. Степень числа 3</h2>
+      <p>Введите положительное целое число не больше 9 007 199 254 740 991. Проверяем степени 3 с целым неотрицательным показателем: 1 = 3⁰.</p>
+      <form onsubmit="event.preventDefault(); checkPower()" oninput="document.getElementById('power-result').textContent = ''" onreset="document.getElementById('power-result').textContent = ''">
+        <label>Число n<input id="number" name="number" type="number" min="1" max="9007199254740991" step="1" required></label>
+        <p><button type="submit">Проверить число</button><button type="reset">Очистить</button></p>
+        <p id="power-result" class="result" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

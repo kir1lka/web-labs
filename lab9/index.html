@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Лабораторная работа 9</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Лабораторная работа 9</h1>
+    <p>Применение регулярных выражений JavaScript при обработке Web-форм.</p>
+    <nav aria-label="Разделы">
+      <a href="#registration">Форма регистрации</a>
+      <a href="../">Все лабораторные</a>
+    </nav>
+    <section id="registration">
+      <h2>Для регистрации необходимо указать ваши персональные данные</h2>
+      <form id="registration-form" onsubmit="CheckData(); return false;" novalidate>
+        <div class="form-grid">
+          <label for="uname"><span class="req" aria-hidden="true">*</span> Имя</label><input id="uname" name="uname" type="text" autocomplete="name" aria-required="true">
+          <label for="organization">Организация (компания)</label><input id="organization" name="organization" type="text" autocomplete="organization">
+          <label for="phone">Телефон</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+7 (900) 123-45-67">
+          <label for="email"><span class="req" aria-hidden="true">*</span> Адрес эл.почты</label><input id="email" name="email" type="email" autocomplete="email" aria-required="true" placeholder="ivanov@example.ru">
+        </div>
+        <p class="actions"><button type="submit">Отправить</button><button type="reset">Очистить</button></p>
+        <p class="note"><span class="req" aria-hidden="true">*</span> Поля обязательные для заполнения</p>
+        <p id="form-result" class="result" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
